@@ -1,4 +1,8 @@
 class Booking < ApplicationRecord
-  has_many :animations
-  validates :name,presence: true, uniqueness: true
+  belongs_to :animation
+  belongs_to :user
+
+  validates :arrival_time, presence: true, uniqueness: true
+  validates :departure_time, presence: true, uniqueness: true
+  validates :place, presence: true
 end
