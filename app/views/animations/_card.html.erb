@@ -1,0 +1,12 @@
+<div class="wrapper" style="background-image: url(https://res.cloudinary.com/dydwtoubz/image/upload/v1550327680/Chica%20Coktails/pexels-photo-842955.jpg)">
+    <div class="container">
+      <div class="row">
+        <% animations.each do |animation| %>
+        <div class="col-xs-12 col-sm-6 col-md-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dydwtoubz/image/upload/v1550242925/cj6ntnbniqzqhjqmeldu.jpg)">
+          <div class="card-description"><%= link_to animation.title.capitalize, animation_path(animation) %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
