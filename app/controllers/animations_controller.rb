@@ -1,21 +1,23 @@
 class AnimationsController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
+  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   def index
-    @animations = Animation.all
+    @animations = policy_scope(Animation)
   end
 
   def show
-    @animation = Animation.find(params[:id])
     @review = Review.new
   end
 
   def new
-    @animation = Animation.new
+    @animation = curent_user.animations.new
+    authorize @animation
   end
 
   def create
-    @animation = Animation.new(animation_params)
+    @animation = curent_user.animations.new(animation_params)
+    authorize @animation
     if @animation.save
       redirect_to animation_path(@animation)
     else
@@ -43,5 +45,10 @@ class AnimationsController < ApplicationController
 
   def animation_params
     params.require(:animation).permit(:title, :category, :price)
+  end
+
+  def set_restaurant
+    @animation = Animation.find(params[:id])
+    authorize @animation
   end
 end
