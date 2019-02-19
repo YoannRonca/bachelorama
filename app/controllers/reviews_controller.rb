@@ -14,7 +14,6 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to animation_path(@animation)
     else
-      raise
       render :new
     end
   end
