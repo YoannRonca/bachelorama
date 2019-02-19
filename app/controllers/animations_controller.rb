@@ -11,12 +11,12 @@ class AnimationsController < ApplicationController
   end
 
   def new
-    @animation = curent_user.animations.new
+    @animation = current_user.animations.new
     authorize @animation
   end
 
   def create
-    @animation = curent_user.animations.new(animation_params)
+    @animation = current_user.animations.new(animation_params)
     authorize @animation
     if @animation.save
       redirect_to animation_path(@animation)
