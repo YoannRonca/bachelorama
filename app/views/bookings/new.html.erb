@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1> Book this animation <%= @animation.title %></h1>
+      <%= simple_form_for [@animation, @booking] do |f| %>
+        <%= f.input :place, label: "Where is it going to take place?", placeholder: "Your city"%>
+        <%= f.input :arrival_time, label: "Starts at", placeholder:  %>
+        <%= f.input :departure_time, label: "Ends at", placeholder:  %>
+        <%= f.submit "Book now", class: 'btn btn-success' %>
+      <% end %>
+      </div>
+  </div>
+</div>
