@@ -1,8 +1,5 @@
 class AnimationsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :home
-
-  def home
-  end
+  before_action :authenticate_user!, only: :show
 
   def index
     @animations = Animation.all
