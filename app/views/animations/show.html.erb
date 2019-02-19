@@ -1,19 +1,24 @@
 <div class="container" style="text-align: center">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-    <h1><%= @animation.title %></h1>
-    <h2><%= @animation.category.capitalize %> - $<%= @animation.price %></h2>
-    <br>
+      <h1><%= @animation.title %></h1>
+      <h2><%= @animation.category.capitalize %> - $<%= @animation.price %></h2>
+      <br>
 
-    <%= link_to "Book", animations_path, class: 'btn btn-success' %>
-    <%= link_to "Review", animations_path, class: 'btn btn-warning' %>
-    <%= link_to "Back", animations_path, class: 'btn btn-primary' %>
-    <%= link_to "Delete", animation_path(@animation.id),
-        method: :delete,
-        data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+      <h3>Reviews</h3>
+      <% @animation.reviews.each do |review| %>
+        <%= review.rating  %> - <%= review.content  %>
+      <% end %>
 
-
-
+      <%= link_to "Book", animations_path, class: 'btn btn-success' %>
+      <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-warning' %>
+      <%= link_to "Back", animations_path, class: 'btn btn-primary' %>
+      <%= link_to "Delete", animation_path(@animation.id),
+          method: :delete,
+          data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
     </div>
   </div>
 </div>
+
+<!-- fix the new animation booking -->
+<!-- Fix the review comment, comments are not showing -->

@@ -7,6 +7,7 @@ class AnimationsController < ApplicationController
 
   def show
     @animation = Animation.find(params[:id])
+    @review = Review.new
   end
 
   def new
