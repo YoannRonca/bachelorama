@@ -10,7 +10,7 @@
         <%= review.rating  %> - <%= review.content  %>
       <% end %>
 
-      <%= link_to "Book", animations_path, class: 'btn btn-success' %>
+      <%= link_to "Book", new_animation_booking_path(@animation), class: 'btn btn-success' %>
       <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-warning' %>
       <%= link_to "Back", animations_path, class: 'btn btn-primary' %>
       <%= link_to "Delete", animation_path(@animation.id),
