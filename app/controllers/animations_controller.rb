@@ -1,6 +1,6 @@
 class AnimationsController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
-  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  before_action :set_animation, only: [:show, :edit, :update, :destroy]
 
   def index
     @animations = policy_scope(Animation)
@@ -44,10 +44,10 @@ class AnimationsController < ApplicationController
   private
 
   def animation_params
-    params.require(:animation).permit(:title, :category, :price)
+    params.require(:animation).permit(:title, :category, :price, :photo)
   end
 
-  def set_restaurant
+  def set_animation
     @animation = Animation.find(params[:id])
     authorize @animation
   end
