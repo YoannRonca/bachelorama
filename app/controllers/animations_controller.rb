@@ -11,7 +11,7 @@ class AnimationsController < ApplicationController
   end
 
   def new
-    @animation = current_user.animations.new
+    @animation = Animation.new
     authorize @animation
   end
 
