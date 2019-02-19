@@ -20,13 +20,20 @@ bruno = User.create!(email: "bruno@gmail.com", password: "543221")
 
 puts 'Creating 6 animations...'
 
-Animation.create!(title: "Clown yoself!", category: "clown", price:"200", user: yoann)
-Animation.create!(title: "Throw yo'dwarf", category: "dwarf", price:"500", user: livia)
-Animation.create!(title: "Better than Ariel", category: "mermaid", price:"100", user: muriel)
-Animation.create!(title: "Lamas in Pajamas", category: "lama", price:"800", user: bruno)
-Animation.create!(title: "Gorillaz like in N", category: "monkey", price:"400", user: bruno)
-Animation.create!(title: "Lose yo wife", category: "stripper", price:"1000", user: livia)
+clown = Animation.create!(title: "Clown yoself!", category: "clown", price:"200", user: yoann)
+dwarf = Animation.create!(title: "Throw yo'dwarf", category: "dwarf", price:"500", user: livia)
+ariel = Animation.create!(title: "Better than Ariel", category: "mermaid", price:"100", user: muriel)
+lama = Animation.create!(title: "Lamas in Pajamas", category: "lama", price:"800", user: bruno)
+gorillaz = Animation.create!(title: "Gorillaz like in N", category: "monkey", price:"400", user: bruno)
+striper = Animation.create!(title: "Lose yo wife", category: "stripper", price:"1000", user: livia)
 
+puts 'Creating 6 bookings...'
+
+Booking.create!(place: "Bordeaux", user: yoann, animation: clown)
+Booking.create!(place: "Pigalle", user: livia, animation: dwarf)
+Booking.create!(place: "Nation", user: muriel, animation: ariel)
+Booking.create!(place: "Tour eiffel", user: bruno, animation: gorillaz)
+Booking.create!(place: "Lyon", user: bruno, animation: lama)
 
 puts 'Finished!'
 
