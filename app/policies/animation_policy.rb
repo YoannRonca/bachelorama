@@ -17,7 +17,6 @@ class AnimationPolicy < ApplicationPolicy
     new?
   end
 
-
   def update?
     record.user == user
   end
