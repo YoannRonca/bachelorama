@@ -3,7 +3,6 @@
 }
 
 .container {
-  height: 800px;
   background: #f4f4f400;
   background-size: cover;
 }
@@ -30,16 +29,20 @@
   margin: 20px;
   border-radius: 5px;
 }
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: space-around
+
+}
 .card-description {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
   font-size: 22px;
 }
 .card-description a {
   text-decoration: none;
   color: white;
-  font-size: 15px;
+  font-size:18px;
   font-weight: light;
 }
 
