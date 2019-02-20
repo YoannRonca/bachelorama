@@ -5,6 +5,8 @@
       <%= simple_form_for(@animation) do |f| %>
         <%= f.input :title, placeholder: 'Enter your title' %>
         <%= f.input :category, collection: Animation::CATEGORIES, as: :select %>
+        <%= f.input :description %>
+        <%= f.input :address %>
         <%= f.input :price %>
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
