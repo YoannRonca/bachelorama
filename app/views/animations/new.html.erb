@@ -1,7 +1,7 @@
-<div class="container">
+<div class="wrapper-form" style="background-image: url(https://res.cloudinary.com/dydwtoubz/image/upload/v1550660166/bachelorama/adults-audience-band-342520.jpg)">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h2>Add your animation</h2>
+      <h2>Add Your Animation!</h2>
       <%= simple_form_for(@animation) do |f| %>
         <%= f.input :title, placeholder: 'Enter your title' %>
         <%= f.input :category, collection: Animation::CATEGORIES, as: :select %>
