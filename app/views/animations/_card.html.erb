@@ -4,14 +4,21 @@
         <% animations.each do |animation| %>
           <% if animation.photo.blank? %>
             <div class="col-xs-12 col-sm-6 col-md-4 centered" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dydwtoubz/image/upload/v1550242925/cj6ntnbniqzqhjqmeldu.jpg)">
-              <div class="card-description"><%= link_to animation.title.capitalize, animation_path(animation) %>
+              <div class="card">
+                <div class="card-description"><%= link_to animation.title.capitalize, animation_path(animation) %>
+                </div>
+                <i class="far fa-heart" id="biglove"></i>
               </div>
+
             </div>
           <% else %>
             <div class="col-xs-12 col-sm-6 col-md-4 centered" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
              url('<%= cl_image_path animation.photo, height: 300, width: 400, crop: :fill %>')">
-              <div class="card-description"><%= link_to animation.title.capitalize, animation_path(animation) %>
-              </div>
+             <div class="card">
+                <div class="card-description"><%= link_to animation.title.capitalize, animation_path(animation) %>
+                </div>
+                <i class="far fa-heart" id="biglove"></i>
+             </div>
             </div>
           <% end %>
         <% end %>
