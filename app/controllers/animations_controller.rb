@@ -8,6 +8,12 @@ class AnimationsController < ApplicationController
 
   def show
     @review = Review.new
+
+    @markers =
+      {
+        lng: @animation.longitude,
+        lat: @animation.latitude
+      }
   end
 
   def new
@@ -44,7 +50,7 @@ class AnimationsController < ApplicationController
   private
 
   def animation_params
-    params.require(:animation).permit(:title, :category, :price, :photo)
+    params.require(:animation).permit(:title, :category, :price, :photo, :address, :description)
   end
 
   def set_animation

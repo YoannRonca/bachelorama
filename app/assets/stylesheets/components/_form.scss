@@ -1,0 +1,37 @@
+.wrapper-form {
+  background-size: cover;
+}
+
+.col-md-6 h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 45px;
+  font-weight: bolder;
+}
+
+.simple_form {
+  margin-bottom: 50px;
+}
+
+input, #animation_title {
+  border-radius: 4px;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+input.btn.btn-primary {
+  font-family: 'Montserrat', sans-serif;
+  color: #e63271;
+  background-color: white;
+  border: white;
+  opacity: .9;
+   &:hover {
+    opacity: .7;
+   }
+}
+
