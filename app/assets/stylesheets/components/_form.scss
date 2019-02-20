@@ -35,3 +35,19 @@ input.btn.btn-primary {
    }
 }
 
+.btn-rose {
+  color: #e63271;
+  border: 1px solid #e63271;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+    color: #34472a;
+  }
+}
+
+
+
