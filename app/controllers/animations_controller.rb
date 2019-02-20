@@ -8,6 +8,14 @@ class AnimationsController < ApplicationController
 
   def show
     @review = Review.new
+    @animation = Animation.where.not(latitude: nil, longitude: nil)
+
+    @markers = @animation.map do |animation|
+      {
+        lng: animation.longitude,
+        lat: animation.latitude
+      }
+    end
   end
 
   def new
