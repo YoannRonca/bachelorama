@@ -10,5 +10,8 @@ class Animation < ApplicationRecord
   validates :category, presence: true
   validates :price, presence: true, numericality: { only_interger: true }
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   CATEGORIES = ['clown', 'dwarf', 'mermaid', 'lama', 'monkey', 'chicken', 'stripper', 'juggler', 'singer']
 end
