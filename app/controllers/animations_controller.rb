@@ -44,7 +44,7 @@ class AnimationsController < ApplicationController
   private
 
   def animation_params
-    params.require(:animation).permit(:title, :category, :price, :photo)
+    params.require(:animation).permit(:title, :category, :price, :photo, :address, :description)
   end
 
   def set_animation
