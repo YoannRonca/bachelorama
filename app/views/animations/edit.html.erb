@@ -5,10 +5,12 @@
       <%= simple_form_for(@animation) do |f| %>
         <%= f.input :title, placeholder: 'Enter your title' %>
         <%= f.input :category, collection: Animation::CATEGORIES, as: :select %>
+        <%= f.input :description %>
         <%= f.input :price %>
         <%= f.input :photo %>
+
         <%= f.input :photo_cache, as: :hidden %>
-        <%= f.submit class: "btn btn-primary" %>
+        <%= f.submit class: "btn btn-medium" %>
       <% end %>
       </div>
   </div>

@@ -1,17 +1,17 @@
 .btn-medium {
-  color: #34472a;
-  border: 1px solid #d6b840;
+  color: #70877F;
+  font-family: 'Proza Libre', sans-serif;
   padding: 10px 15px;
   margin: 10px;
   border-radius: 50px;
   font-weight: bold;
   opacity: 0.8;
-  background: #d6b840;
-  transition: background 0.3s ease;
+  background: #FFD400;
+  transition: background 0.5s ease;
 }
 
 .btn-medium:hover {
   opacity: 1;
   text-decoration: none;
-  color: #34472a;
+  color: #70877F;
 }

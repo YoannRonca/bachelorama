@@ -1,21 +1,22 @@
 .footer {
+  font-family: 'Proza Libre', sans-serif;
   background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: #d6b840;
+  color: #70877F;
 }
 
 .footer-links {
-  color: #d6b840;
+  color: #70877F;
   display: flex;
   align-items: center;
 }
 
 .footer-links a {
-  color: #d6b840;
+  color: #70877F;
   opacity: 0.6;
   text-decoration: none;
   font-size: 24px;
@@ -26,5 +27,5 @@
   opacity: 1;
 }
 .footer .fa-heart {
-  color: #d6b840;
+  color: #70877F;
 }
