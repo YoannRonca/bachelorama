@@ -7,14 +7,16 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-
-  <%= form_tag animations_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find an animation"
-    %>
-  <% end %>
+    <div class="container-searchbar">
+      <%= form_tag animations_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "searchbar",
+          placeholder: "Search..."
+        %>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="Magnifying Glass" class="button">
+      <% end %>
+    </div>
 
     <% if user_signed_in? %>
 
