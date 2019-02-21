@@ -8,14 +8,22 @@
   justify-content: center;
 }
 .banner-show h1 {
+  font-family: 'Proza Libre', sans-serif;
   font-size: 50px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 .banner-show p {
+  font-family: 'Proza Libre', sans-serif;
   font-size: 25px;
   font-weight: lighter;
   color: rgb(255, 255, 255);
   opacity: 0.6;
   margin-bottom: 30px;
+}
+
+.title {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 25px;
+  color: white
 }
