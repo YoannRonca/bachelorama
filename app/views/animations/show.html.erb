@@ -7,37 +7,61 @@
     <h1><%= @animation.title %></h1>
   </div>
 <% end %>
-<div class="main-container">
-
-  <div class="wrapper">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2><%= @animation.category.capitalize %> - $<%= @animation.price %></h2>
-        <h3>Description</h3>
-        <p><%= @animation.description %></p>
-        <br>
-
-        <div class="reviews">
-          <h3>Reviews</h3>
-            <% @animation.reviews.each do |review| %>
-              <%= review.rating  %> - <%= review.content  %>
-            <% end %>
-        </div>
-        <div class="links">
-          <%= link_to "Book", new_animation_booking_path(@animation), class: 'btn btn-medium' %>
-          <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-medium'  %>
-          <%= link_to "Back", animations_path, class: 'btn btn-medium' %>
-          <% if @animation.user == current_user %>
-          <%= link_to "Edit", edit_animation_path, class: 'btn btn-btn-medium' %>
-          <%= link_to "Delete", animation_path(@animation.id),
-              method: :delete,
-              data: { confirm: "Are you sure?" }, class: 'btn btn-btn-medium' %>
-          <% end %>
+<div class="main-container-show">
+  <div class="wrapper-show">
+    <div class="row-show">
+      <h2><%= @animation.category.capitalize %></h2>
+      <div class="grid">
+          <div class="description">
+            <h3>Description</h3>
+            <p><%= @animation.description %></p>
+          </div>
+        <div class="detail">
+          <h2> <%= @animation.price %> $ </h2>
+          <div class="links">
+            <ul class= "ul-show">
+              <li>
+                <%= link_to "Book", new_animation_booking_path(@animation), class: 'btn btn-medium' %>
+              </li>
+              <li>
+                <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-medium'  %>
+            </li>
+              <%= link_to "Back", animations_path, class: 'btn btn-medium' %>
+              <li>
+            </li>
+              <li>
+              <% if @animation.user == current_user %>
+              <%= link_to "Edit", edit_animation_path, class: 'btn btn-btn-medium' %>
+              <%= link_to "Delete", animation_path(@animation.id),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" }, class: 'btn btn-btn-medium' %>
+              <% end %>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
+    <div class="reviews">
+      <h3>Reviews</h3>
+      <% @animation.reviews.each do |review| %>
+        <div class="message">
+          <img class="avatar-large" src="">
+          <div class="message-name">
+            <h3>Gab Dehan</h3>
+            <p>10/07/17</p>
+          </div>
+          <div class="message-body">
+            <p><%= review.content  %></p>
+          </div>
+          <div class="message-rate">
+            <%= review.rating  %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
   <div
     id="map"
     style="width: 100%;
