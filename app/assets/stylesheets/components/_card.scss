@@ -8,43 +8,45 @@
   background-size: cover;
 }
 
-.cards {
-  height: 250px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  color: white;
-  position: relative;
-  margin-bottom: 20px;
-}
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
 .col-xs-12 {
-  background-size: cover !important;
-  width: 250px;
-  height: 200px;
+  background-size: cover;
+  width: 350px;
+  height: 250px;
   top: 10px;
   left: 10px;
   font-size: 20px;
   margin: 20px;
   border-radius: 5px;
-}
-
-.centered {
   display: flex;
   align-items: center;
-  justify-content: space-around
+  justify-content: space-around;
+  &:hover {
+    transition: 0.6s;
+    opacity: .7;
+  }
+}
 
-}
-.card-description {
-  font-size: 22px;
-}
 .card-description a {
   text-decoration: none;
   color: white;
   font-size:18px;
   font-weight: light;
+}
+
+p {
+  text-align: justify;
+  // height: 30%;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  left: 5px;
+  right: 5px;
+  opacity: 0;
+  &:hover {
+    transition: 0.6s;
+    opacity: .9;
+  }
 }
 
 .card-link {
@@ -56,6 +58,7 @@
   background: black;
   opacity: 0;
 }
+
 .card-link:hover {
   opacity: 0.1;
 }
@@ -66,3 +69,20 @@
   top: 10px;
   right: 10px;
 }
+
+// ______________________________________
+// Utile?
+
+// .cards {
+//   height: 250px;
+//   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+//   color: white;
+//   position: relative;
+//   margin-bottom: 20px;
+// }
+
+// .card-user {
+//   position: absolute;
+//   right: 10px;
+//   top: 10px;
+// }
