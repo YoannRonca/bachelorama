@@ -1,8 +1,19 @@
-.main-container {
+.main-container-show {
   display: flex;
 }
 
-.wrapper {
+.grid {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-row: 50% 50%;
+
+}
+
+.row-show {
+  margin: 20px;
+}
+
+.wrapper-show {
   flex: auto
 }
 
