@@ -1,4 +1,9 @@
 class BookingsController < ApplicationController
+  def show
+    @bookings = Booking.all
+    authorize @bookings
+  end
+
   def new
     @booking = Booking.new
     authorize @booking

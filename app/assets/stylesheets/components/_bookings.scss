@@ -7,6 +7,16 @@
   border-radius: 3px;
 }
 
+.product-description {
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  height: 120px;
+  width: 200px;
+}
+
 .product:hover {
   background: rgb(240, 240, 240);
 }

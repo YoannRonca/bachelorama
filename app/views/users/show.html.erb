@@ -3,63 +3,29 @@
   <h2>Upcoming plans</h2>
 
   <ul class="list-unstyled">
-    <li class="product">
+    <% @user.bookings.each do |booking| %>
+      <li class="product">
 
-      <div class="product-upvote text-center">
-        <p>16</p>
-      </div>
+        <div class="product-upvote text-center">
+          <p>16</p>
+        </div>
 
-      <img src="http://unsplash.it/200/120/?random" alt="" class="product-image img-rounded">
+        <img src=<%= booking.animation.photo %> alt="" class="product-image img-rounded" style="height: 300, width: 400">
 
-      <div class="product-description">
-        <h3>Intercom</h3>
-        <p>The best CRM tool.</p>
-      </div>
+        <div class="product-description">
+          <p><%= booking.place %></p>
+          <p><%= @user.email %></p>
+          <p><%= booking.arrival_time %></p>
+          <p><%= booking.departure_time %></p>
+          <p><%= booking.animation.title %></p>
+        </div>
 
-      <ul class="list-inline product-controls">
-        <li><a href=""><i class="fa fa-heart"></i></a></li>
-        <li><a href=""><i class="fa fa-share"></i></a></li>
-        <li><a href=""><i class="fa fa-star"></i></a></li>
-      </ul>
-    </li>
-    <li class="product">
 
-      <div class="product-upvote text-center">
-        <p>16</p>
-      </div>
+        <div class="status">
+          <p>Status</p>
+        </div>
+      </li>
+      <% end %>
 
-      <img src="http://unsplash.it/200/120/?random" alt="" class="product-image img-rounded">
-
-      <div class="product-description">
-        <h3>Intercom</h3>
-        <p>The best CRM tool.</p>
-      </div>
-
-      <ul class="list-inline product-controls">
-        <li><a href=""><i class="fa fa-heart"></i></a></li>
-        <li><a href=""><i class="fa fa-share"></i></a></li>
-        <li><a href=""><i class="fa fa-star"></i></a></li>
-      </ul>
-    </li>
-    <li class="product">
-
-      <div class="product-upvote text-center">
-
-        <p>16</p>
-      </div>
-
-      <img src="http://unsplash.it/200/120/?random" alt="" class="product-image img-rounded">
-
-      <div class="product-description">
-        <h3>Intercom</h3>
-        <p>The best CRM tool.</p>
-      </div>
-
-      <ul class="list-inline product-controls">
-        <li><a href=""><i class="fa fa-heart"></i></a></li>
-        <li><a href=""><i class="fa fa-share"></i></a></li>
-        <li><a href=""><i class="fa fa-star"></i></a></li>
-      </ul>
-    </li>
   </ul>
 </div>
