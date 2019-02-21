@@ -12,20 +12,25 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h2><%= @animation.category.capitalize %> - $<%= @animation.price %></h2>
+      <h3>Description</h3>
+      <p><%= @animation.description %></p>
       <br>
 
-      <h3>Reviews</h3>
-      <% @animation.reviews.each do |review| %>
-        <%= review.rating  %> - <%= review.content  %>
-      <% end %>
-
-      <%= link_to "Book", new_animation_booking_path(@animation), class: 'btn btn-success' %>
-      <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-warning' %>
-      <%= link_to "Edit", edit_animation_path, class: 'btn btn-primary' %>
-      <%= link_to "Back", animations_path, class: 'btn btn-primary' %>
-      <%= link_to "Delete", animation_path(@animation.id),
-          method: :delete,
-          data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+      <div class="reviews">
+        <h3>Reviews</h3>
+          <% @animation.reviews.each do |review| %>
+            <%= review.rating  %> - <%= review.content  %>
+          <% end %>
+      </div>
+      <div class="links">
+        <%= link_to "Book", new_animation_booking_path(@animation), class: 'btn btn-success' %>
+        <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-warning' %>
+        <%= link_to "Edit", edit_animation_path, class: 'btn btn-primary' %>
+        <%= link_to "Back", animations_path, class: 'btn btn-primary' %>
+        <%= link_to "Delete", animation_path(@animation.id),
+            method: :delete,
+            data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+      </div>
     </div>
   </div>
 </div>
