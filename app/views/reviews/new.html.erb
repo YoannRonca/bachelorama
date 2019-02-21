@@ -6,7 +6,7 @@
         <%= f.input :rating , collection: 0..5 %>
         <%= f.input :content %>
         <%= f.submit class: "btn btn-medium"%>
-        <%= link_to "Back", animations_path, class: 'btn btn-medium' %>
+        <%= link_to "Back", animation_path(@animation), class: 'btn btn-medium' %>
       <% end %>
       </div>
   </div>
