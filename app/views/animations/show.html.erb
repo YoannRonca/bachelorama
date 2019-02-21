@@ -31,10 +31,10 @@
             </li>
               <li>
               <% if @animation.user == current_user %>
-              <%= link_to "Edit", edit_animation_path, class: 'btn btn-btn-medium' %>
+              <%= link_to "Edit", edit_animation_path, class: 'btn btn-medium' %>
               <%= link_to "Delete", animation_path(@animation.id),
                   method: :delete,
-                  data: { confirm: "Are you sure?" }, class: 'btn btn-btn-medium' %>
+                  data: { confirm: "Are you sure?" }, class: 'btn btn-medium' %>
               <% end %>
               </li>
             </ul>
