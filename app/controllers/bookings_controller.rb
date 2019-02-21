@@ -8,11 +8,13 @@ class BookingsController < ApplicationController
   def create
     @animation = Animation.find(params[:animation_id])
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
     authorize @booking
     @booking.animation = @animation
     if @booking.save
-      redirect_to animation_path(@animation)
+      redirect_to animation_path(@animation), notice: "Your booking request has been sent"
     else
+      raise
       render :new
     end
   end
@@ -20,6 +22,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:animation_id, :user_id, :place)
+    params.require(:booking).permit(:animation_id, :place, :arrival_time, :departure_time)
   end
 end
