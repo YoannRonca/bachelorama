@@ -23,14 +23,14 @@
           <% end %>
       </div>
       <div class="links">
-        <%= link_to "Book", new_animation_booking_path(@animation), class: 'btn btn-success' %>
-        <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-warning' %>
-        <%= link_to "Back", animations_path, class: 'btn btn-primary' %>
+        <%= link_to "Book", new_animation_booking_path(@animation), class: 'btn btn-medium' %>
+        <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-medium'  %>
+        <%= link_to "Back", animations_path, class: 'btn btn-medium' %>
         <% if @animation.user == current_user %>
-        <%= link_to "Edit", edit_animation_path, class: 'btn btn-primary' %>
+        <%= link_to "Edit", edit_animation_path, class: 'btn btn-btn-medium' %>
         <%= link_to "Delete", animation_path(@animation.id),
             method: :delete,
-            data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+            data: { confirm: "Are you sure?" }, class: 'btn btn-btn-medium' %>
         <% end %>
       </div>
     </div>
