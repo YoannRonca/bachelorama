@@ -3,7 +3,15 @@ class AnimationsController < ApplicationController
   before_action :set_animation, only: [:show, :edit, :update, :destroy]
 
   def index
-    @animations = policy_scope(Animation)
+    if params[:query].present?
+      sql_query = " \
+        animations.title ILIKE :query \
+        OR animations.description ILIKE :query \
+      "
+      @animations = policy_scope(Animation).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @animations = policy_scope(Animation)
+    end
   end
 
   def show
