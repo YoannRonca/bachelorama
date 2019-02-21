@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     authorize @booking
     @booking.animation = @animation
     if @booking.save
-      redirect_to user_path(@user), notice: "Your booking request has been sent"
+      redirect_to user_path, notice: "Your booking request has been sent"
     else
       render :new
     end
