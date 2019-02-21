@@ -1,10 +1,12 @@
 .btn-medium {
-  color: #d6b840;
+  color: #34472a;
   border: 1px solid #d6b840;
   padding: 10px 15px;
   border-radius: 50px;
-  font-weight: lighter;
+  font-weight: bold;
   opacity: 0.8;
+  background: #d6b840;
+  transition: background 0.3s ease;
 }
 
 .btn-medium:hover {
