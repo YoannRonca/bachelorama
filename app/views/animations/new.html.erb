@@ -1,16 +1,18 @@
-<div class="wrapper">
+<div class="wrapper" >
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h2>Add Your Animation!</h2>
+      <h2> &#x1F389;  Add your animation! &#x1F389; </h2>
       <%= simple_form_for(@animation) do |f| %>
         <%= f.input :title, placeholder: 'Enter your title' %>
         <%= f.input :category, collection: Animation::CATEGORIES, as: :select %>
-        <%= f.input :description %>
-        <%= f.input :address %>
-        <%= f.input :price %>
+        <%= f.input :description, placeholder: 'What makes you special?' %>
+        <%= f.input :address, placeholder: 'Gimme your address' %>
+        <%= f.input :price, placeholder: 'Show me the money' %>
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
+        <hr>
         <%= f.submit class: "btn-medium"%>
+        <%= link_to "Back", animations_path, class: 'btn btn-medium' %>
       <% end %>
       </div>
   </div>
