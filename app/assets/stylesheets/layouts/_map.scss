@@ -1,10 +1,11 @@
 .main-container-show {
   display: flex;
+  margin-top: 5px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 85% 15%;
   grid-template-row: 50% 50%;
 
 }
@@ -14,9 +15,11 @@
 }
 
 .wrapper-show {
-  background-color: #70877F;
+  background-color: #e0e4f5;;
   flex: auto;
   width: 50%;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 #map {
