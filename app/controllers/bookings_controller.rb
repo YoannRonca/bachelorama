@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     authorize @booking
     @booking.animation = @animation
     if @booking.save
-      redirect_to user_path(current_user), notice: "Your booking request has been sent"
+      redirect_to user_path(current_user), notice: "\u{1F4C5} Your booking request has been sent \u{1F4C5}"
     else
       render :new
     end

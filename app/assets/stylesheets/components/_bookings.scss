@@ -1,40 +1,56 @@
-.product {
+.booked {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   transition: all 0.3s ease;
-  border-radius: 3px;
+  border-radius: 4px;
+  margin: 2px;
   img {
     height: 120px;
     width: 200px;
+    border-radius: 4px;
   }
 }
 
-.product-description {
+.list-unstyled {
+  border-radius: 3px;
+  #booked-header {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-bottom: 27px;
+  }
+}
+
+.booked-description {
   display: flex;
   justify-content: space-around;
 }
 
-.product:hover {
-  background: rgb(240, 240, 240);
+.booked:hover {
+  background: #e6e6e6;
+  img:hover {
+  }
 }
 
-.product:hover .product-upvote {
+.booked:hover .booked-upvote {
   font-size: 25px;
 }
 
-.product-upvote {
+.booked-upvote {
   font-size: 20px;
-  padding: 20px;
   transition: all 0.3s ease;
+  p {
+    opacity: 0;
+  }
 }
 
-.product-description {
+.booked-description {
   flex: 1 0 auto;
   padding: 20px;
 }
-.product-controls a {
+.booked-controls a {
   font-size: 15px;
   color: #CCCCCC;
 }
