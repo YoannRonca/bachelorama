@@ -10,11 +10,19 @@
 <div class="main-container-show">
   <div class="wrapper-show">
     <div class="row-show">
-      <h2><%= @animation.category.capitalize %></h2>
+      <h2 id= "category-title" ><%= @animation.category.capitalize %></h2>
       <div class="grid">
           <div class="description">
             <h3>Description</h3>
             <p><%= @animation.description %></p>
+          </div>
+          <div class="calendar">
+
+            <%= simple_form_for [@animation, @booking],  html: {class: 'flexbox'} do |f| %>
+              <%= f.input :arrival_time, as: :string, required: false, input_html: { class: 'datepickershow margin-right start_date'} %>
+              <%= f.input :departure_time, as: :string, required: false, input_html: { class: 'datepickershow end_date' } %>
+            <% end %>
+
           </div>
         <div class="detail">
           <h2> <%= @animation.price %> $ </h2>
@@ -44,13 +52,19 @@
     </div>
 
     <div class="reviews">
-      <h3>Reviews</h3>
+      <h3 id= "review-title" >Reviews</h3>
       <% @animation.reviews.each do |review| %>
         <div class="message">
           <img class="avatar-large" src="">
           <div class="message-name">
-            <h3>Gab Dehan</h3>
-            <p>10/07/17</p>
+            <ul style="list-style: none;">
+              <li>
+                <h3 color=>Frank</h3>
+              </li>
+              <li>
+                <p>22/02/19</p>
+              </li>
+            </ul>
           </div>
           <div class="message-body">
             <p><%= review.content  %></p>
@@ -64,8 +78,6 @@
   </div>
   <div
     id="map"
-    style="width: 100%;
-    height: 600px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>

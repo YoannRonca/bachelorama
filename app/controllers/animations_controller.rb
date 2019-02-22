@@ -15,6 +15,7 @@ class AnimationsController < ApplicationController
   end
 
   def show
+    @booking = @animation.bookings.first
     @review = Review.new
 
     @markers =
