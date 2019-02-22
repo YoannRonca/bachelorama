@@ -15,12 +15,13 @@
 
 .wrapper-show {
   background-color: #70877F;
-  flex: auto
+  flex: auto;
+  width: 50%;
 }
 
 #map {
   flex: 0 0 450px;
-  height: 100vh;
+  height: calc(100vh - 70px);
   position: sticky !important; /* !important to override Gmaps inline CSS */
-  top: 0 !important;
+  top: 70px !important;
 }
