@@ -13,5 +13,5 @@ class Animation < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  CATEGORIES = ['clown', 'dwarf', 'mermaid', 'lama', 'monkey', 'chicken', 'stripper', 'juggler', 'singer']
+  CATEGORIES = ['Clown', 'Dwarf', 'Mermaid', 'Llama', 'Monkey', 'Chicken', 'Stripper', 'Juggler', 'Singer', 'Magician']
 end
