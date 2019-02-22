@@ -35,5 +35,9 @@ Booking.create!(place: "Nation", user: muriel, animation: ariel)
 Booking.create!(place: "Tour eiffel", user: bruno, animation: gorillaz)
 Booking.create!(place: "Lyon", user: bruno, animation: lama)
 
+puts 'Creating 5 reviews...'
+
+Review.create(content: "Hello World Great Gig!", rating: 4,  user: yoann, animation: clown)
+
 puts 'Finished!'
 

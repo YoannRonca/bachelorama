@@ -32,6 +32,7 @@
   color: white;
   font-size:18px;
   font-weight: light;
+  text-align: center;
 }
 
 .card-link {
@@ -55,6 +56,12 @@
   right: 10px;
 }
 
+.card-ratings {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
 // ______________________________________
 // Utile?
 
