@@ -1,23 +1,29 @@
 <div class="container">
-  <h1>Welcome, <%= @user.email %>:</h1>
-  <h2>Upcoming plans</h2>
+  <h2>Welcome, <%= @user.name %>:</h2>
+  <h3>Upcoming plans:</h3>
 
   <ul class="list-unstyled">
+    <ul class="list-unstyled" id="booked-header">
+      <li>Animation:</li>
+      <li>Starts at:</li>
+      <li>Ends at:</li>
+      <li>Local:</li>
+      <li>Status:</li>
+    </ul>
     <% @user.bookings.each do |booking| %>
-      <li class="product">
+      <li class="booked">
 
-        <div class="product-upvote text-center">
+        <div class="booked-upvote text-center">
           <p>16</p>
         </div>
 
-        <img src=<%= booking.animation.photo %> alt="" class="product-image img-rounded" style="height: 300, width: 400">
+        <img src=<%= booking.animation.photo %> alt="" class="booked-image img-rounded" style="height: 300, width: 400">
 
-        <div class="product-description">
-          <p><%= booking.place %></p>
-          <p><%= @user.email %></p>
-          <p><%= booking.arrival_time %></p>
-          <p><%= booking.departure_time %></p>
+        <div class="booked-description">
           <p><%= booking.animation.title %></p>
+          <p><%= booking.arrival_time.strftime('%d/%m/%Y') %></p>
+          <p><%= booking.departure_time.strftime('%d/%m/%Y') %></p>
+          <p><%= booking.place %></p>
         </div>
 
 
