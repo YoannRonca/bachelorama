@@ -1,10 +1,11 @@
 <div class="wrapper">
-  <div class="row" style="height: 80vh">
-    <div class="col-md-6 col-md-offset-3">
-      <h2>Add a review</h2>
+  <div class="row" style="height: 80vh" >
+    <div class="col-md-6 col-md-offset-3" style="margin-top: 55px">
+      <h2> &#x1F44D; Review your animation &#x1F44E;</h2>
       <%= simple_form_for [@animation, @review] do |f| %>
         <%= f.input :rating , collection: 0..5 %>
         <%= f.input :content %>
+        <hr>
         <%= f.submit class: "btn btn-medium"%>
         <%= link_to "Back", animation_path(@animation), class: 'btn btn-medium' %>
       <% end %>
