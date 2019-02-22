@@ -16,3 +16,17 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
+
+
+console.log('coucou')
+
+const form = document.getElementById('search-form')
+const results = document.getElementById('results')
+
+function scrollToResult() {
+  form.addEventListener('submit', (event) => {
+    results.scrollIntoView()
+  });
+}
+
+scrollToResult()
