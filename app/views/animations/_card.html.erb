@@ -5,8 +5,18 @@
           <% if animation.photo.blank? %>
             <div class="col-xs-12 col-sm-6 col-md-4 centered" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dydwtoubz/image/upload/v1550242925/cj6ntnbniqzqhjqmeldu.jpg)">
               <div class="card">
-                <div class="card-description">
-                  <h3><%= link_to animation.title.capitalize, animation_path(animation) %></h3>
+                <div class="card-description text-center">
+                  <h3><%= link_to animation.title.titleize, animation_path(animation) %></h3>
+                  <%= link_to animation.category.titleize, animation_path(animation) %>
+                </div>
+                <div class="card-ratings">
+                <% if animation.reviews.empty? %>
+                  <p>No rating</p>
+                <% else %>
+                  <% animation.reviews.first.rating.to_i.times do  %>
+                   <i class="fas fa-star fa-sm"></i>
+                  <% end %>
+                <% end %>
                 </div>
                 <i class="far fa-heart" id="biglove"></i>
               </div>
@@ -15,9 +25,20 @@
           <% else %>
             <div class="col-xs-12 col-sm-6 col-md-4 centered" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
              url('<%= cl_image_path animation.photo, height: 300, width: 400, crop: :fill %>')">
-             <div class="card">
-                <div class="card-description"><%= link_to animation.title.capitalize, animation_path(animation) %>
+             <div class="card text-center">
+                <div class="card text-center"><%= link_to animation.title.titleize, animation_path(animation) %>
                 </div>
+                <div class="card text-center"><%= link_to animation.category.titleize, animation_path(animation) %>
+                </div>
+                <div class="card-ratings">
+                <% if animation.reviews.empty? %>
+                  <p>No rating</p>
+                <% else %>
+                  <% animation.reviews.first.rating.to_i.times do  %>
+                   <i class="fas fa-star fa-sm"></i>
+                  <% end %>
+                <% end %>
+              </div>
                 <i class="far fa-heart" id="biglove"></i>
              </div>
             </div>
