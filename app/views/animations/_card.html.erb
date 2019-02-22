@@ -26,9 +26,9 @@
             <div class="col-xs-12 col-sm-6 col-md-4 centered" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
              url('<%= cl_image_path animation.photo, height: 300, width: 400, crop: :fill %>')">
              <div class="card text-center">
-                <div class="card text-center"><%= link_to animation.title.titleize, animation_path(animation) %>
+                <div class="card-description text-center"><%= link_to animation.title.titleize, animation_path(animation) %>
                 </div>
-                <div class="card text-center"><%= link_to animation.category.titleize, animation_path(animation) %>
+                <div class="card-description text-center"><%= link_to animation.category.titleize, animation_path(animation) %>
                 </div>
                 <div class="card-ratings">
                 <% if animation.reviews.empty? %>

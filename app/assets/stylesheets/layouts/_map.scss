@@ -19,11 +19,14 @@
 }
 
 .wrapper-show {
-  background-color: #e0e4f5;
+  background-color: #fdfeff;
   flex: auto;
   width: 50%;
   margin-right: 5px;
   margin-left: 5px;
+  p {
+    color: #0000009e;
+  }
 }
 
 #map {

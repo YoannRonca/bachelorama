@@ -42,6 +42,9 @@ h3 {
   padding: 20px;
   border-bottom: 1px solid rgba(220,224,244,0.4);
   border-top: 1px solid rgba(220,224,244,0.4);
+  h3, p {
+    color: #0000009e;
+  }
 }
 
 .message:last-child {
@@ -49,7 +52,13 @@ h3 {
 }
 .message-body {
   flex-grow: 1;
+  p {
+    color: #888889;
+  }
 }
+
+
+
 .message-name {
   padding-left: 10px;
   min-width: 100px;
