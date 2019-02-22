@@ -1,10 +1,11 @@
 .wrapper-form {
   background-size: cover;
+  height: 100vh;
 }
 
 .col-md-6 h2 {
   font-family: 'Lato', sans-serif;
-  color: #0000009e;
+  color: #ea825e;
   font-size: 45px;
   font-weight: bolder;
   text-align: center;
@@ -32,6 +33,12 @@ input, #animation_category {
   border-radius: 50px;
   font-family: 'Lato', sans-serif;
   color: #0000009e;
+  -webkit-appearance: none;
+}
+
+#review_rating, #review_content {
+  border-radius: 50px;
+  -webkit-appearance: none;
 }
 
 input, #animation_description {
@@ -68,6 +75,12 @@ input, #booking_departure_time {
   border-radius: 50px;
   font-family: 'Lato', sans-serif;
   color: #0000009e;
+}
+
+input {
+  #animation_photo {
+    display: inline-flex;
+  }
 }
 
 #user_email, #user_password {

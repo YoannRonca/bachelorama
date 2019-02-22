@@ -1,7 +1,7 @@
-<div class="wrapper">
-  <div class="row" style="height: 80vh" >
-    <div class="col-md-6 col-md-offset-3" style="margin-top: 55px">
-      <h2> &#x1F44D; Review your animation &#x1F44E;</h2>
+<div class="wrapper-form" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.2)), url(https://res.cloudinary.com/dydwtoubz/image/upload/v1550844293/balloons-birthday-bright-796606.jpg)">
+  <div class="row" style="height: 80vh">
+    <div class="col-md-6 col-md-offset-3">
+      <h2>Add a review</h2>
       <%= simple_form_for [@animation, @review] do |f| %>
         <%= f.input :rating , collection: 0..5 %>
         <%= f.input :content %>
