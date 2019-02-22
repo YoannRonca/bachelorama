@@ -10,10 +10,10 @@
 <div class="main-container-show">
   <div class="wrapper-show">
     <div class="row-show">
-      <h2 id= "category-title" ><%= @animation.category.capitalize %></h2>
+      <h2 id= "category-title" style= "color: #ea825e" ><%= @animation.category.capitalize %></h2>
       <div class="grid">
           <div class="description">
-            <h3>Description</h3>
+            <h4>Description</h4>
             <p><%= @animation.description %></p>
           </div>
           <div class="calendar">
@@ -25,16 +25,18 @@
 
           </div>
         <div class="detail">
-          <h2> <%= @animation.price %> $ </h2>
+          <h2 style= "color: black"> <%= @animation.price %> $ </h2>
+          <hr>
           <div class="links">
             <ul class= "ul-show">
               <li>
-                <%= link_to "Book", new_animation_booking_path(@animation), class: 'btn btn-medium' %>
+                <%= link_to "Book", new_animation_booking_path(@animation), class: 'btn btn-medium'%>
               </li>
+              <hr>
               <li>
-                <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-medium'  %>
+                <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-medium', id: "showbutton"   %>
             </li>
-              <%= link_to "Back", animations_path, class: 'btn btn-medium' %>
+              <%= link_to "Back", animations_path, class: 'btn btn-medium', id: "showbutton" %>
               <li>
             </li>
               <li>
@@ -59,18 +61,18 @@
           <div class="message-name">
             <ul style="list-style: none;">
               <li>
-                <h3 color=>Frank</h3>
+                <h3 color: #ea825e =>Frank</h3>
               </li>
               <li>
-                <p>22/02/19</p>
+                <h3 style= "color: #ea825e" =>22/02/19</h3>
               </li>
             </ul>
           </div>
           <div class="message-body">
-            <p><%= review.content  %></p>
+            <p style= "color: #ea825e" =><%= review.content  %></p>
           </div>
           <div class="message-rate">
-            <%= review.rating  %>
+            <h4 style= "color: #ea825e" ><%= review.rating  %></h4>
           </div>
         </div>
       <% end %>

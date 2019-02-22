@@ -5,13 +5,17 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 85% 15%;
+  grid-template-columns: 76% 24%;
   grid-template-row: 50% 50%;
 
 }
 
 .row-show {
   margin: 20px;
+}
+
+.detail {
+  margin-right: 100px;
 }
 
 .wrapper-show {
