@@ -8,7 +8,7 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <div class="container-searchbar">
-      <%= form_tag animations_path, method: :get do %>
+      <%= form_tag animations_path, id: 'search-form',method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "searchbar",
