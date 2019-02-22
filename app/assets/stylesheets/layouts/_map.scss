@@ -1,10 +1,11 @@
 .main-container-show {
   display: flex;
+  margin-top: 5px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 76% 24%;
   grid-template-row: 50% 50%;
 
 }
@@ -13,14 +14,21 @@
   margin: 20px;
 }
 
+.detail {
+  margin-right: 100px;
+}
+
 .wrapper-show {
-  background-color: #70877F;
-  flex: auto
+  background-color: #e0e4f5;;
+  flex: auto;
+  width: 50%;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 #map {
   flex: 0 0 450px;
-  height: 100vh;
+  height: calc(100vh - 70px);
   position: sticky !important; /* !important to override Gmaps inline CSS */
-  top: 0 !important;
+  top: 70px !important;
 }

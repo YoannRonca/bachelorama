@@ -3,12 +3,35 @@
   margin-bottom: 20px;
 }
 
-h3 {
-  color: white;
+#category-title {
+  margin-left: 15px;
+}
+
+#review-title {
+  margin-left: 30px;
+}
+
+#showbutton {
+  background-color: #fdfeff;
+  border-color: #ea825e;
+  font-weight: lighter;
+  color: #ea825e;
+}
+
+h4 {
+  color: #ea825e;
   margin-top: 15px;
   margin-left: 5px;
   margin-bottom: 12.5px;
 }
+
+h3 {
+  color: #ea825e;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-bottom: 12.5px;
+}
+
  .links {
   margin-bottom: 15px;
  }
@@ -18,7 +41,9 @@ h3 {
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid rgba(220,224,244,0.4);
+  border-top: 1px solid rgba(220,224,244,0.4);
 }
+
 .message:last-child {
   border-bottom: none;
 }
@@ -67,4 +92,8 @@ h3 {
 }
 .status.pending {
   color: lightgrey;
+}
+
+.message-rate {
+  margin: 20px;
 }

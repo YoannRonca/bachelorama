@@ -6,6 +6,7 @@
         <%= f.input :place, label: "Where is the party at?", placeholder: "Your city"%>
         <%= f.input :arrival_time, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :departure_time, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <hr>
         <%= f.submit "Book now", class: 'btn btn-medium' %>
         <%= link_to "Back", animation_path(@animation), class: 'btn btn-medium' %>
       <% end %>

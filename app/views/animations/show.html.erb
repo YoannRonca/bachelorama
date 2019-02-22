@@ -10,23 +10,33 @@
 <div class="main-container-show">
   <div class="wrapper-show">
     <div class="row-show">
-      <h2><%= @animation.category.capitalize %></h2>
+      <h2 id= "category-title" style= "color: #ea825e" ><%= @animation.category.capitalize %></h2>
       <div class="grid">
           <div class="description">
-            <h3>Description</h3>
+            <h4>Description</h4>
             <p><%= @animation.description %></p>
           </div>
+          <div class="calendar">
+
+            <%= simple_form_for [@animation, @booking],  html: {class: 'flexbox'} do |f| %>
+              <%= f.input :arrival_time, as: :string, required: false, input_html: { class: 'datepickershow margin-right start_date'} %>
+              <%= f.input :departure_time, as: :string, required: false, input_html: { class: 'datepickershow end_date' } %>
+            <% end %>
+
+          </div>
         <div class="detail">
-          <h2> <%= @animation.price %> $ </h2>
+          <h2 style= "color: black"> <%= @animation.price %> $ </h2>
+          <hr>
           <div class="links">
             <ul class= "ul-show">
               <li>
-                <%= link_to "Book", new_animation_booking_path(@animation), class: 'btn btn-medium' %>
+                <%= link_to "Book", new_animation_booking_path(@animation), class: 'btn btn-medium'%>
               </li>
+              <hr>
               <li>
-                <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-medium'  %>
+                <%= link_to "Review", new_animation_review_path(@animation), class: 'btn btn-medium', id: "showbutton"   %>
             </li>
-              <%= link_to "Back", animations_path, class: 'btn btn-medium' %>
+              <%= link_to "Back", animations_path, class: 'btn btn-medium', id: "showbutton" %>
               <li>
             </li>
               <li>
@@ -44,19 +54,25 @@
     </div>
 
     <div class="reviews">
-      <h3>Reviews</h3>
+      <h3 id= "review-title" >Reviews</h3>
       <% @animation.reviews.each do |review| %>
         <div class="message">
           <img class="avatar-large" src="">
           <div class="message-name">
-            <h3>Gab Dehan</h3>
-            <p>10/07/17</p>
+            <ul style="list-style: none;">
+              <li>
+                <h3 color: #ea825e =>Frank</h3>
+              </li>
+              <li>
+                <h3 style= "color: #ea825e" =>22/02/19</h3>
+              </li>
+            </ul>
           </div>
           <div class="message-body">
-            <p><%= review.content  %></p>
+            <p style= "color: #ea825e" =><%= review.content  %></p>
           </div>
           <div class="message-rate">
-            <%= review.rating  %>
+            <h4 style= "color: #ea825e" ><%= review.rating  %></h4>
           </div>
         </div>
       <% end %>
@@ -64,8 +80,6 @@
   </div>
   <div
     id="map"
-    style="width: 100%;
-    height: 600px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
