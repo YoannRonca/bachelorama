@@ -1,37 +1,38 @@
-<div class="container">
-  <h2>Welcome, <%= @user.name %>:</h2>
-  <h3>Upcoming plans:</h3>
+<div class="wrapper">
+  <div class="booking-list">
+    <h2>Welcome, <%= @user.name %>:</h2>
+    <h3>Upcoming plans:</h3>
 
-  <ul class="list-unstyled">
-    <ul class="list-unstyled" id="booked-header">
-      <li>Animation:</li>
-      <li>Starts at:</li>
-      <li>Ends at:</li>
-      <li>Local:</li>
-      <li>Status:</li>
+    <ul class="list-unstyled">
+      <ul class="list-unstyled" id="booked-header">
+        <li>Animation:</li>
+        <li>Starts at:</li>
+        <li>Ends at:</li>
+        <li>Local:</li>
+        <li>Status:</li>
+      </ul>
+      <% @user.bookings.each do |booking| %>
+        <li class="booked">
+
+          <div class="booked-upvote text-center">
+            <p>ab</p>
+          </div>
+
+          <img src=<%= booking.animation.photo %> alt="" class="booked-image img-rounded" style="height: 300, width: 400">
+
+          <div class="booked-description">
+            <p><%= booking.animation.title %></p>
+            <p><%= booking.arrival_time.strftime('%d/%m/%Y') %></p>
+            <p><%= booking.departure_time.strftime('%d/%m/%Y') %></p>
+            <p><%= booking.place %></p>
+          </div>
+
+
+          <div class="status">
+            <p>Pending</p>
+          </div>
+        </li>
+        <% end %>
     </ul>
-    <% @user.bookings.each do |booking| %>
-      <li class="booked">
-
-        <div class="booked-upvote text-center">
-          <p>16</p>
-        </div>
-
-        <img src=<%= booking.animation.photo %> alt="" class="booked-image img-rounded" style="height: 300, width: 400">
-
-        <div class="booked-description">
-          <p><%= booking.animation.title %></p>
-          <p><%= booking.arrival_time.strftime('%d/%m/%Y') %></p>
-          <p><%= booking.departure_time.strftime('%d/%m/%Y') %></p>
-          <p><%= booking.place %></p>
-        </div>
-
-
-        <div class="status">
-          <p>Status</p>
-        </div>
-      </li>
-      <% end %>
-
-  </ul>
+  </div>
 </div>
