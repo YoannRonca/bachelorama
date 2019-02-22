@@ -10,6 +10,14 @@
   text-align: center;
 }
 
+.col-md-6 h1 {
+  font-family: 'Lato', sans-serif;
+  color: #0000009e;
+  font-size: 45px;
+  font-weight: bolder;
+  text-align: center;
+}
+
 .simple_form {
   margin-bottom: 50px;
 }
@@ -20,7 +28,7 @@ input, #animation_title {
   color: #0000009e;
 }
 
-#animation_category {
+input, #animation_category {
   border-radius: 50px;
   font-family: 'Lato', sans-serif;
   color: #0000009e;
@@ -39,6 +47,24 @@ input, #animation_address {
 }
 
 input, #animation_price {
+  border-radius: 50px;
+  font-family: 'Lato', sans-serif;
+  color: #0000009e;
+}
+
+input, #booking_place {
+  border-radius: 50px;
+  font-family: 'Lato', sans-serif;
+  color: #0000009e;
+}
+
+input, #booking_arrival_time {
+  border-radius: 50px;
+  font-family: 'Lato', sans-serif;
+  color: #0000009e;
+}
+
+input, #booking_departure_time {
   border-radius: 50px;
   font-family: 'Lato', sans-serif;
   color: #0000009e;
